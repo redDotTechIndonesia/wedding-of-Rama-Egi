@@ -1,0 +1,1027 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap');
+@font-face {
+  font-family: wedding;
+  src: url(font/Olive\ Oil.otf);
+  font-weight: 100;
+}
+@font-face {
+  font-family: country_wedding;
+  src: url(font/Country\ Wedding.ttf);
+  font-weight: 100;
+}
+
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-family: "Arima",serif;
+}
+.container {
+  max-width: 520px;
+  overflow: hidden;
+  /* background-color: rgba(253, 253, 253, 0.97); */
+  margin: auto;
+}
+body::-webkit-scrollbar {
+  width: 0px; /* Ubah lebar scrollbar sesuai kebutuhan */
+}
+
+body {
+  background:#ffe4e4;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* tutup overlay */
+#tutup {
+  width: 100%;
+  height: 100vh;
+  z-index: 999;
+  position: fixed;
+  transition: .8s ease;
+  background: linear-gradient(rgba(77, 77, 77, 0.39),rgba(79, 79, 79, 0.596)),url('img/cover.jpg') no-repeat center / cover;
+}
+
+#tutup .text-tutup{
+  position: absolute;
+  top: 40%;
+  text-align: center;
+  color: white;
+  width:100%;
+  padding: 0 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#tutup .text-tutup p{
+  font-size:1.3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+#tutup .text-tutup h1{
+  font-size: 3rem;
+  margin-bottom: 7px;
+  color: #fe74b0;
+}
+
+#tutup .text-tutup h2#nama_tamu{
+  font-size:2rem;
+}
+#tutup .text-tutup h2{
+  font-size: 1.1rem;
+  margin: 10px 0;
+  line-height: 1.3rem;
+}
+#tutup .text-tutup a {
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #fe74b0;
+  padding: 8px 25px;
+  color: white;
+  transition: .8s ease-in-out;
+  margin-top: 10px;
+  border-radius: 5px;
+ transform: scale(.9);
+}
+#tutup .text-tutup a:hover{
+  transform: scale(1.1);
+}
+.move{
+  transform: translateX(-100%);
+  opacity: 0;
+}
+/* content */
+/* home */
+.slider {
+  position: relative;
+}
+.slider::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(255, 255, 255, 0.386) 50%,rgba(79, 79, 79, 0.596));
+  z-index: 2;
+}
+.swiper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.swiper::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  position: absolute;
+  background:linear-gradient(rgba(255, 255, 255, 0.396),#0000005a);
+  z-index: 99;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  /* display: block; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info {
+  position: absolute;
+  color: white;
+  bottom: 15%;
+  right: 0;
+  left: 0;
+  z-index: 5;
+  text-align: center;
+}
+.info p{
+  font-size: 1.6rem;
+}
+.info h1 {
+  font-size: 3rem;
+  font-family:wedding , sans-serif;
+  line-height: 4rem;
+  color: #FFB4C2;
+
+  font-weight: 100;
+}
+.info h2 {
+  margin-top: 1.3rem;
+  font-weight: normal;
+  font-size: 1rem;
+}
+.box-info {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+.sv-date {
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(2, 40px);
+  place-items: center;
+  padding: 10px;
+}
+.sv-date p {
+  font-size: 18px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.countdown {
+  width: 100%;
+  padding: 10px;
+  border-left: 1px solid white;
+}
+
+/* caption */
+#caption .box-caption {
+  padding:40px 20px;
+  position: relative;
+  background: url("img/bg_flower.png") no-repeat center / cover;
+}
+#caption .box-caption .tamu_waktu{
+  padding-bottom: 1rem ;
+}
+#caption .box-caption .tamu_waktu .tamu{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 1rem;
+
+}
+#caption .box-caption .tamu_waktu .tamu p{
+  font-weight: 600;
+  font-size:.9rem;
+  color: #5A5A5A ;
+}
+#caption .box-caption .tamu_waktu .tamu .nama_tamu{
+  font-size:2.5rem;
+  margin: .5rem 0;
+  color: #D17B88 ;
+
+}
+#caption .box-caption .tamu_waktu .waktu .tanggal{
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: bold;
+  color: #5A5A5A ;
+
+}
+
+#caption .isi-caption {
+  margin-top: 30px;
+  text-align: center;
+  color: #5A5A5A ;
+
+}
+#caption .isi-caption h1 {
+  margin: 30px;
+  font-size: 1.5rem;
+  font-family: cursive;
+  color: #D17B88 ;
+}
+#caption .isi-caption p {
+  margin: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* about */
+.about .box_about {
+  position: relative;
+  overflow: hidden;
+  background: url("img/bg_flower.png") no-repeat center / cover;
+  padding: 20px 0 40px 0;
+}
+.about .box_about .box_title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about .box_about .box_title::before,
+.about .box_about .box_title::after{
+  content: '';
+  display: inline-block;
+  width: 20%;
+  height: 3px;
+  background-color: #D17B88 ;
+  margin:0 10px;
+}
+.about .box_about .box_title h2 {
+  text-align: center;
+  font-family: wedding;
+  font-size: 1.8rem;
+  color: #D17B88 ;
+}
+.about .box_about .bungkus_about .cowo, .about .box_about .bungkus_about .cewe {
+  margin-top: 100px;
+}
+.about .box_about .bungkus_about .cowo .box_cowo, .about .box_about .bungkus_about .cowo .box_cewe, .about .box_about .bungkus_about .cewe .box_cowo, .about .box_about .bungkus_about .cewe .box_cewe {
+  margin: 10px 0;
+  position: relative;
+}
+.about .box_about .bungkus_about .cowo .box_cowo .border_img, .about .box_about .bungkus_about .cowo .box_cewe .border_img, .about .box_about .bungkus_about .cewe .box_cowo .border_img, .about .box_about .bungkus_about .cewe .box_cewe .border_img {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.about .box_about .bungkus_about .cowo .box_cowo .box_img, .about .box_about .bungkus_about .cowo .box_cewe .box_img, .about .box_about .bungkus_about .cewe .box_cowo .box_img, .about .box_about .bungkus_about .cewe .box_cewe .box_img {
+  width: 220px;
+  height: 220px;
+  margin: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 12px #00000060;
+ 
+}
+.about .box_about .bungkus_about .cowo .box_cowo .box_img img, .about .box_about .bungkus_about .cowo .box_cewe .box_img img, .about .box_about .bungkus_about .cewe .box_cowo .box_img img, .about .box_about .bungkus_about .cewe .box_cewe .box_img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about .box_about .bungkus_about .cowo .pengenal, .about .box_about .bungkus_about .cewe .pengenal {
+  width: 100%;
+  margin: 30px auto;
+  text-align: center;
+}
+.about .box_about .bungkus_about .cowo .pengenal h2, .about .box_about .bungkus_about .cewe .pengenal h2 {
+  font-size: 1.5rem;
+  line-height: 35px;
+  color: #D17B88 ;
+}
+.about .box_about .bungkus_about .cowo .pengenal p, .about .box_about .bungkus_about .cewe .pengenal p {
+  margin-top: 10px;
+  font-weight: 150;
+  line-height: 10px;
+  color: #5A5A5A ;
+  font-family: serif;
+}
+.about .box_about .bungkus_about .heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+  text-align: center;
+ color: #5A5A5A ;
+}
+.about .box_about .bungkus_about .heart::before, .about .box_about .bungkus_about .heart::after {
+  content: "";
+  width: 150px;
+  height: 2px;
+  background-color: #5A5A5A ;
+  display: inline-block;
+  margin-inline: 10px;
+}
+
+
+/* story */
+#story .box-story {
+  padding: 40px 20px;
+  background:#ffe4e4;
+  position: relative;
+}
+#story .box-story .box_title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#story .box-story .box_title::before,
+#story .box-story .box_title::after{
+  content: '';
+  display: inline-block;
+  width: 20%;
+  height: 3px;
+  background-color: #D17B88 ;
+  margin:0 10px;
+}
+#story .box-story .box_title h2 {
+  text-align: center;
+  font-family: wedding;
+  font-size: 1.8rem;
+  color: #D17B88 ;
+}
+#story .heading-title p{
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 500;
+  color: #5A5A5A ;
+  font-family: serif;
+  text-align: center;
+}
+
+#story .timeline {
+  margin-top: 50px;
+  padding: 1.3rem;
+  list-style: none;
+  position: relative;
+}
+#story .timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  width: 2px;
+  background-color: #D17B88;
+}
+#story .timeline li:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 13px;
+  border-radius: 50%;
+  border: 3px solid white;
+  background-color: #D17B88;
+}
+#story .timeline .panel {
+  margin: 20px 15px;
+  padding: 15px;
+  border-radius: 0 20px 20px 20px;
+  background-color: #D17B88;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.225);
+}
+#story .timeline .panel h2{
+    font-size: 1.1rem;
+    margin-top: 5px;
+    color: #fff ;
+    margin-bottom: 2px;
+}
+#story .timeline .panel p{
+    font-size: .9em;
+    color: #fff ;
+    font-weight: 500;
+   
+}
+#story .timeline li::before,
+#story .timeline li::after {
+  content: "";
+  display: table;
+}
+#story .timeline li::after {
+  clear: both;
+}
+#story .bunga{
+  list-style: none;
+}
+#story .bunga li{
+  position: absolute;
+}
+#story .bunga li img{
+  width: 300px;
+}
+
+#story .bunga li.kiri_atas{
+  transform: scaleX(-1) rotate(120deg);
+  top: -100px;
+  left: -50px;
+}
+#story .bunga li.kanan_atas{
+  transform: rotate(120deg);
+  top: -100px;
+  right: -50px;
+}
+
+/* galeri */
+#galeri .box-galeri{  
+padding: 25px 15px 100px 15px;
+background:#ffe4e4;
+position: relative;
+}
+
+#galeri .box-galeri .box_title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#galeri .box-galeri .box_title::before,
+#galeri .box-galeri .box_title::after{
+  content: '';
+  display: inline-block;
+  width: 20%;
+  height: 3px;
+  background-color: #D17B88 ;
+  margin:0 10px;
+}
+#galeri .box-galeri .box_title h2 {
+  text-align: center;
+  font-family: wedding;
+  font-size: 1.8rem;
+  color: #D17B88 ;
+}
+#galeri .heading-title p{
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: 500;
+  font-family: serif;
+  text-align: center;
+  color: #5A5A5A ;
+}
+#galeri .box-galeri .img_top{
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+#galeri .box-galeri .img_top img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#galeri .box-galeri .kumpulan-foto{
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(2,1fr);
+}
+#galeri .box-galeri .kumpulan-foto div{
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+#galeri .box-galeri .kumpulan-foto img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 -70px;
+  transition: .8s ease-in-out;
+  cursor: pointer;
+}
+#galeri .box-galeri .kumpulan-foto img:hover{
+  transform: scale(1.2);
+}
+
+#galeri .bunga{
+  list-style: none;
+}
+#galeri .bunga li{
+  position: absolute;
+}
+#galeri .bunga li img{
+  width: 300px;
+}
+
+#galeri .bunga li.kiri_bawah{
+  transform:rotate(-70deg);
+  bottom: -50px;
+  left: -80px;
+}
+#galeri .bunga li.kanan_bawah{
+  transform: scaleX(-1) rotate(-70deg);
+  bottom: -50px;
+  right: -80px;
+}
+
+/* event */
+#event .box-gelombang .gelombang{
+  margin-bottom: -10px;
+  position: relative;
+  height: 150px;
+}
+#event .box-gelombang svg{
+  position: absolute;
+}
+#event .box-gelombang svg:nth-child(1){
+  fill: #d17b8838;
+  bottom: 35px;
+  z-index: 1;
+}
+#event .box-gelombang svg:nth-child(2){
+  fill: #f18e9dbe;
+  bottom: 25px;
+  z-index: 2;
+}
+#event .box-gelombang svg:nth-child(3){
+  fill:#D17B88;
+  bottom: 0;
+  z-index: 3;
+}
+#event .box-event{
+  height: 100%;
+  padding: 50px 15px 30px 15px;
+  background-color: #D17B88 ;
+}
+#event .box-event .box_title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#event .box-event .box_title::before,
+#event .box-event .box_title::after{
+  content: '';
+  display: inline-block;
+  width: 20%;
+  height: 3px;
+  background-color: #fff ;
+  margin:0 10px;
+}
+#event .box-event .box_title h2 {
+  text-align: center;
+  font-family: wedding;
+  font-size: 1.8rem;
+  color: #fff ;
+}
+#event .heading-title p{
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 500;
+  color: white;
+  font-family: serif;
+  text-align: center;
+}
+#event .card-container {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.742);
+  margin: 50px 0;
+  display: flex;
+}
+#event .card-side{
+  display: flex;
+  align-items: center;
+  padding: 30px 20px;
+  background-color: #ffc1c1 ;
+}
+#event .card-side h2{
+  color: #5A5A5A ;
+  writing-mode: vertical-rl;
+  font-size: 2rem;
+  font-weight: 600;
+  word-spacing: 7px;
+  transform: rotate(180deg);
+}
+#event .card-side .reverse{
+  color: #5A5A5A ;
+  writing-mode: vertical-rl;
+  font-size: 2rem;
+  font-weight: 600;
+  word-spacing: 7px;
+  transform: rotate(0deg);
+}
+#event .card-info{
+  padding: 10px;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 30px;
+  background: rgba(255, 255, 255, 0.423);
+  backdrop-filter: blur(10px);
+}
+#event .info-tanggal{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+#event .info-tanggal .tanggal,#event .info-tanggal .tanggal-full{
+  padding: 20px 25px;
+}
+#event .info-tanggal .tanggal{
+  text-align: center;
+  width: 80%;
+  border-left:1px solid black ;
+}
+#event .info-tanggal .tanggal h1,#event .info-tanggal .tanggal-full h1{
+  font-family: "Arima",serif;
+  font-weight: 700;
+}
+#event .info-tanggal .tanggal h1{
+  font-size: 2.4rem;
+  color: rgba(30, 41, 59, 0.7);
+}
+#event .info-tanggal .tanggal-full{
+  width: 100%;
+  text-align: right;
+}
+#event .info-tanggal .tanggal-full h1{
+  font-size: 1rem;
+  line-height: 20px;
+  color: rgba(30, 41, 59, 0.7);
+}
+#event .info-detail{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: rgba(30, 41, 59, 0.7);
+  text-align: center;
+}
+#event .info-detail h2{
+  font-size: 1.1rem;
+  margin-bottom: 3px;
+}
+#event .info-detail h3{
+  font-size: 1rem;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+#event .info-detail p{
+  font-size: .8rem;
+  margin-bottom: 10px;
+}
+#event .info-detail a i{
+  margin-right: 5px;
+}
+#event .info-detail a{
+  text-decoration: none;
+  display: inline-block;
+  background-color: #ffc1c1 ;
+  padding: 8px 25px;
+  color: #5A5A5A ;
+  font-weight: 600;
+  transition: .8s ease-in-out;
+  margin-top: 10px;
+  border-radius: 5px;
+ transform: scale(.9);
+}
+#event .info-detail a:hover{
+ background-color: #5A5A5A ;
+ color: #fff ;
+ border: 1px solid rgba(30, 41, 59, 0.7);
+ transform: scale(1);
+}
+
+/* RSVP */
+#rsvp .box-rsvp{  
+  padding: 55px 15px 10px 15px;
+  background: linear-gradient(#ffffffa7,#ffe4e49d),url(img/bgaceh.jpg) no-repeat center / cover;
+  
+}
+#rsvp .box-rsvp .box_title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#rsvp .box-rsvp .box_title::before,
+#rsvp .box-rsvp .box_title::after{
+  content: '';
+  display: inline-block;
+  width: 20%;
+  height: 3px;
+  background-color: #5A5A5A ;
+  margin:0 10px;
+}
+#rsvp .box-rsvp .box_title h2 {
+  text-align: center;
+  font-family: wedding;
+  font-size: 1.8rem;
+  color: #5A5A5A ;
+}
+#rsvp .heading-title p{
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 500;
+  color: #5A5A5A;
+  font-family: serif;
+  text-align: center;
+}
+#rsvp form{
+  padding: 10px 20px;
+}
+#rsvp form label{
+  font-size: 1.1;
+  color: #5A5A5A;
+  font-weight: 600;
+}
+
+#rsvp form #nama::placeholder,textarea::placeholder{
+  color: white;
+}
+#rsvp form #nama,textarea,button{
+  display: block;
+  margin: 7px 0 20px;
+  width: 100%;
+  color: white;
+  background-color: #5A5A5A;
+  padding: 12px 10px;
+  border-radius: 10px;
+  border: none;
+}
+#rsvp form #nama:focus,textarea:focus,button{
+  outline: none;
+  border: none;
+}
+#rsvp form button{
+  width: 200px;
+  font-weight: 600;
+  background-color: #5A5A5A;
+  color: white;
+  font-size:.9rem;
+  transition: .4s;
+  cursor: pointer;
+}
+#rsvp form button:hover{
+  font-weight: 600;
+  background-color: #444e5c;
+  color: white;
+  cursor: pointer;
+}
+#rsvp form .box-konfirmasi{
+  display: flex;
+  gap: 6px;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+#rsvp form #pesan{
+  display: block;
+  margin-top: 20px;
+}
+#rsvp form textarea{
+  height: 150px;
+}
+
+
+/* gift */
+#gift .box-gift{  
+  padding: 55px 15px 10px 15px;
+  background: #d17b88;
+}
+#gift .heading-title h2 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 500;
+  color: #fff;
+  position: relative;
+  font-family: wedding;
+}
+#gift .heading-title p{
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 500;
+  color: #fff;
+  font-family: serif;
+  text-align: center;
+}
+#gift .heading-title p.caption_gift{
+  font-size: .9rem;
+  text-align: center;
+  font-weight: 500;
+  color: #fff;
+}
+#gift .heading-title h2::before {
+  content: '';
+  display: inline-block;
+  margin: 0 10px;
+  width: 80px;
+  position: relative;
+  top: -7px;
+  height: 1px;
+  background-color: #fff;
+}
+#gift .heading-title h2::after {
+  content: '';
+  display: inline-block;
+  margin: 0 10px;
+  width: 80px;
+  position: relative;
+  top: -7px;
+  height: 1px;
+  background-color: #fff;
+}
+
+#gift .gift_konten .gift_list{
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 5px 3px rgba(0, 0, 0, .2);
+  padding: 1rem 2rem;
+  margin: 1.5rem 0;
+
+}
+#gift .gift_konten .gift_list .box_img{
+  width: 100%;
+  height: 100px;
+  padding: 1rem 0;
+  margin-bottom: 1.4rem;
+  border-bottom: 2px solid #5A5A5A;
+}
+#gift .gift_konten .gift_list .box_img img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+#gift .gift_konten .gift_list p{
+  line-height: 1.4rem;
+  margin-bottom: 1rem;
+}
+#gift .gift_konten .gift_list .salin{
+  width: 100%;
+  cursor: pointer;
+  display: inline-block;
+  padding: .7rem 1.4rem;
+  border-radius: 20px;
+  background-color: #d17b88;
+  text-decoration: none;
+  color: white;
+  transition: .4s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
+}
+#gift .gift_konten .gift_list .salin:hover{
+  box-shadow: none;
+}
+
+/* closing */
+#closing  .box_closing{
+  color: #5A5A5A;
+  padding:8rem 15px 4rem 15px;
+  display: grid;
+  place-items:center ;
+  text-align: center;
+  background: linear-gradient(#ffe4e4ad, #ffe4e4), url(img/closing.jpg) no-repeat center/cover;
+}
+#closing  .box_closing h2.terimakasih{
+  font-size:2rem;
+  margin-bottom: 3px;
+}
+#closing  .box_closing p{
+  font-size:.9rem;
+  margin-bottom: 20px;
+}
+#closing  .box_closing #nama_pengantin{
+  font-size:1.7rem;
+  color: #d17b88;
+}
+
+/* navbar bottom */
+
+
+
+
+/* footer */
+footer .box-footer{
+  background-color: #1e293b;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+footer .box-footer a{
+  text-decoration: none;
+  color: skyblue;
+}
+
+
+/* musik */
+#sound .box-sound{
+  position: relative;
+}
+#sound .box-sound .musik{
+  position:fixed;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #444e5c;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 888;
+  transform-origin: center;
+  
+}
+#sound .box-sound .musik i{
+  font-size:2rem;
+  color: white;
+}
+.muter{
+  animation: musikPutar 2s linear infinite;
+}
+
+
+
+
+
+
+
+/* media responsive */
+@media screen and (max-width: 550px) {
+  #home .slider .info {
+    width: 100%;
+    padding: 0 6px;
+  }
+  #home .info h2{
+    font-size:.9rem;
+  }
+  #caption .box-caption {
+    padding: 40px 15px;
+  }
+  #caption .box-caption .tamu_waktu .tamu{
+    width: 100%;
+  }
+  #caption .box-caption .tamu_waktu .tamu .nama_tamu{
+    font-size:2rem;
+  }
+  #caption .box-caption .tamu_waktu .waktu .tanggal{
+    margin-top: .9rem;
+  }
+
+  #event .info-tanggal .tanggal h1{
+    font-size: 3rem;
+    color: rgba(30, 41, 59, 0.7);
+  }
+  #event .info-tanggal .tanggal-full h1{
+    font-size: 1.3rem;
+    line-height: 27px;
+    color: rgba(30, 41, 59, 0.7);
+  }
+  #event .info-detail h2{
+    font-size: 1.3rem;
+  }
+  #event .info-detail h3{
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  #event .info-detail p{
+    font-size: .9rem;
+  }
+}
+
+
+
+/* animation */
+@keyframes sliderbg {
+    0%,100%{
+      transform: scale(1);
+      background-image:
+      url('img/2.jpg');
+    }
+    25%{
+      transform: scale(1.2);
+      background-image:
+      url('img/5.jpg');
+    }
+    50%{
+      transform: scale(1);
+      background-image:
+      url('img/3.jpg');
+    }
+    75%{
+      transform: scale(1.2);
+      background-image:
+      url('img/1.jpg');
+    }
+}
+
+@keyframes musikPutar {
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+}
+
