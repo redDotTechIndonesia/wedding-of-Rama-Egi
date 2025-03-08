@@ -30,7 +30,6 @@ copys.forEach((copy_btn,index)=>{
 // fitur kirim wa
 const form_wa = document.querySelector('#rsvp #form_wa')
 const kirim = document.querySelector('#rsvp #kirim_wa')
-console.log(document.getElementById('pesan'))
 
 kirim.addEventListener('click',(e)=>{
     e.preventDefault();
