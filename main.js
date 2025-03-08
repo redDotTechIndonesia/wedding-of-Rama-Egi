@@ -47,7 +47,7 @@ kirim.addEventListener('click',(e)=>{
 
 // checked box rsvp
 const datang = document.querySelector('#datang')
-const tidakDatang = document.querySelector('#tidak')
+const tidakDatang = document.querySelector('#tidak_datang')
 datang.addEventListener('change',function(){
     if(datang.checked){
         tidakDatang.checked = false
