@@ -18,7 +18,7 @@ copys.forEach((copy_btn,index)=>{
 
         navigator.clipboard.writeText(text_copy)
        
-        copy_btn.innerHTML='<i class="far fa-copy"></i> Text berhasil disalin'
+        copy_btn.innerHTML='<i class="far fa-copy"></i> Rekening berhasil disalin'
         setTimeout(()=>{
             copy_btn.innerHTML=' <i class="far fa-copy"></i> Salin Rekening'
         },1500)
@@ -30,6 +30,7 @@ copys.forEach((copy_btn,index)=>{
 // fitur kirim wa
 const form_wa = document.querySelector('#rsvp #form_wa')
 const kirim = document.querySelector('#rsvp #kirim_wa')
+console.log(document.getElementById('pesan'))
 
 kirim.addEventListener('click',(e)=>{
     e.preventDefault();
