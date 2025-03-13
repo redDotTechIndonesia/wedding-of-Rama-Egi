@@ -35,7 +35,6 @@ body {
   overflow-x: hidden;
 }
 
-/* tutup overlay */
 #tutup {
   width: 100%;
   height: 100vh;
@@ -329,114 +328,6 @@ body {
 }
 
 
-/* story */
-#story .box-story {
-  padding: 40px 20px;
-  background:#ffe4e4;
-  position: relative;
-}
-#story .box-story .box_title{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#story .box-story .box_title::before,
-#story .box-story .box_title::after{
-  content: '';
-  display: inline-block;
-  width: 20%;
-  height: 3px;
-  background-color: #D17B88 ;
-  margin:0 10px;
-}
-#story .box-story .box_title h2 {
-  text-align: center;
-  font-family: wedding;
-  font-size: 1.8rem;
-  color: #D17B88 ;
-}
-#story .heading-title p{
-  font-size: 1.2rem;
-  text-align: center;
-  font-weight: 500;
-  color: #5A5A5A ;
-  font-family: serif;
-  text-align: center;
-}
-
-#story .timeline {
-  margin-top: 50px;
-  padding: 1.3rem;
-  list-style: none;
-  position: relative;
-}
-#story .timeline::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 20px;
-  width: 2px;
-  background-color: #D17B88;
-}
-#story .timeline li:before {
-  content: "";
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  left: 13px;
-  border-radius: 50%;
-  border: 3px solid white;
-  background-color: #D17B88;
-}
-#story .timeline .panel {
-  margin: 20px 15px;
-  padding: 15px;
-  border-radius: 0 20px 20px 20px;
-  background-color: #D17B88;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.225);
-}
-#story .timeline .panel h2{
-    font-size: 1.1rem;
-    margin-top: 5px;
-    color: #fff ;
-    margin-bottom: 2px;
-}
-#story .timeline .panel p{
-    font-size: .9em;
-    color: #fff ;
-    font-weight: 500;
-   
-}
-#story .timeline li::before,
-#story .timeline li::after {
-  content: "";
-  display: table;
-}
-#story .timeline li::after {
-  clear: both;
-}
-#story .bunga{
-  list-style: none;
-}
-#story .bunga li{
-  position: absolute;
-}
-#story .bunga li img{
-  width: 300px;
-}
-
-#story .bunga li.kiri_atas{
-  transform: scaleX(-1) rotate(120deg);
-  top: -100px;
-  left: -50px;
-}
-#story .bunga li.kanan_atas{
-  transform: rotate(120deg);
-  top: -100px;
-  right: -50px;
-}
-
 /* galeri */
 #galeri .box-galeri{  
 padding: 25px 15px 100px 15px;
@@ -528,6 +419,17 @@ position: relative;
   right: -80px;
 }
 
+#galeri .bunga li.kiri_atas{
+  transform: scaleX(-1) rotate(120deg);
+  top: -100px;
+  left: -50px;
+}
+#galeri .bunga li.kanan_atas{
+  transform: rotate(120deg);
+  top: -100px;
+  right: -50px;
+}
+
 /* event */
 #event .box-gelombang .gelombang{
   margin-bottom: -10px;
@@ -589,29 +491,23 @@ position: relative;
   width: 100%;
   background: rgba(255, 255, 255, 0.742);
   margin: 50px 0;
-  display: flex;
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, .2);
 }
 #event .card-side{
-  display: flex;
-  align-items: center;
-  padding: 30px 20px;
+  padding: 16px 20px;
   background-color: #ffc1c1 ;
+  text-align: center;
 }
 #event .card-side h2{
   color: #5A5A5A ;
-  writing-mode: vertical-rl;
   font-size: 2rem;
   font-weight: 600;
-  word-spacing: 7px;
-  transform: rotate(180deg);
 }
 #event .card-side .reverse{
   color: #5A5A5A ;
-  writing-mode: vertical-rl;
   font-size: 2rem;
   font-weight: 600;
   word-spacing: 7px;
-  transform: rotate(0deg);
 }
 #event .card-info{
   padding: 10px;
@@ -902,7 +798,7 @@ position: relative;
 
 /* footer */
 footer .box-footer{
-  background-color: #1e293b;
+  background-color: #d17b88;
   padding: 10px;
   color: white;
   text-align: center;
